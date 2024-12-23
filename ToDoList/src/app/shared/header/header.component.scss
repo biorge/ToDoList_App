@@ -1,0 +1,45 @@
+.header {
+  display: flex;
+  justify-content: space-between; /* Лого и кнопка равномерно распределяются */
+  align-items: center;
+  background-color: #1f1f1f; /* Темный фон */
+  color: #f0f0f0;
+  padding: 1rem 2rem; /* Отступы сверху и по бокам */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%; /* Растягиваем контент на всю ширину */
+}
+
+.logo {
+  flex: 1; /* Лого занимает центральное пространство */
+  text-align: center; /* Центрируем текст */
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ffcc00;
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-end; /* Кнопка всегда справа */
+}
+
+.nav button {
+  background-color: transparent;
+  border: 2px solid #ffcc00;
+  color: #ffcc00;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nav button:hover {
+  background-color: #ffcc00;
+  color: #1f1f1f;
+}

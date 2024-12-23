@@ -1,0 +1,31 @@
+<div class="task-list-container">
+  <h1 class="title">Task List</h1>
+
+  <!-- Поле ввода для поиска -->
+  <input
+    type="text"
+    [(ngModel)]="searchQuery"
+    (input)="filterTasks()"
+    class="search-input"
+    style="margin-bottom: 20px;"
+    placeholder="Search tasks by title..."
+  />
+
+  <button class="btn add-task" (click)="navigateToAddTask()">Add New Task</button>
+
+  <ul class="task-list">
+    <li *ngFor="let task of filteredTasks" class="task-item">
+      <div class="task-details">
+        <h3 class="task-title">{{ task.title }}</h3>
+        <p class="task-description">{{ task.description }}</p>
+        <span class="task-status" [class.completed]="task.status === 'Completed'">
+           {{ task.status | taskStatus }}
+        </span>
+      </div>
+      <div class="task-actions">
+        <button *ngIf="task.id !== undefined" (click)="editTask(task.id)" class="btn edit">Edit</button>
+        <button *ngIf="task.id !== undefined" (click)="deleteTask(task.id)" class="btn delete">Delete</button>
+      </div>
+    </li>
+  </ul>
+</div>

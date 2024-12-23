@@ -1,0 +1,14 @@
+.footer {
+  display: flex;
+  justify-content: center; /* Центрирование текста */
+  align-items: center;
+  background-color: #1f1f1f; /* Темный фон */
+  color: #ffcc00; /* Акцентный цвет текста */
+  padding: 1rem 0;
+  position: fixed; /* Футер остаётся внизу страницы */
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2); /* Тень сверху */
+  font-size: 1rem;
+  font-weight: 500;
+}

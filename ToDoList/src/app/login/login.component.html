@@ -1,0 +1,43 @@
+<div class="login-container">
+  <h1>Login</h1>
+  <form [formGroup]="loginForm" (ngSubmit)="login()" class="login-form">
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input
+        type="email"
+        id="email"
+        formControlName="email"
+        required
+      />
+      <!-- Сообщения о валидации для email -->
+      <small
+        *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched"
+        class="validation-message">
+        <span *ngIf="loginForm.get('email')?.errors?.['required']">Email is required.</span>
+        <span *ngIf="loginForm.get('email')?.errors?.['email']">Invalid email format.</span>
+      </small>
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input
+        type="password"
+        id="password"
+        formControlName="password"
+        required
+      />
+      <!-- Сообщения о валидации для password -->
+      <small
+        *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched"
+        class="validation-message">
+        <span *ngIf="loginForm.get('password')?.errors?.['required']">Password is required.</span>
+        <span *ngIf="loginForm.get('password')?.errors?.['minlength']">Password must be at least 6 characters long.</span>
+      </small>
+    </div>
+
+    <div class="button-group">
+      <button type="submit" class="btn login" [disabled]="loginForm.invalid">Login</button>
+      <button type="button" class="btn register" (click)="navigateToRegister()">Register</button>
+    </div>
+  </form>
+</div>

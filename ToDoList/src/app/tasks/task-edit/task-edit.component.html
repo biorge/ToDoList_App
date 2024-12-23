@@ -1,0 +1,39 @@
+<div class="task-form" *ngIf="task && task.title">
+  <h2>Edit Task</h2>
+  <form (ngSubmit)="updateTask()">
+    <label for="title">Title:</label>
+    <input id="title" [(ngModel)]="task.title" name="title" required />
+
+    <label for="description">Description:</label>
+    <textarea id="description" [(ngModel)]="task.description" name="description"></textarea>
+
+    <label>Status:</label>
+    <div class="status-group">
+      <label>
+        <input
+          type="radio"
+          name="status"
+          value="не выполнена"
+          [(ngModel)]="task.status"
+        />
+        Not Completed
+      </label>
+      <label>
+        <input
+          type="radio"
+          name="status"
+          value="готово"
+          [(ngModel)]="task.status"
+        />
+        Completed
+      </label>
+    </div>
+
+    <button type="submit">Update Task</button>
+  </form>
+</div>
+
+<!-- Если задача не найдена, показываем сообщение -->
+<div *ngIf="!task || !task.title">
+  <p>Task not found. Redirecting...</p>
+</div>
