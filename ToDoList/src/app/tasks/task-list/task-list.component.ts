@@ -58,7 +58,10 @@ export class TaskListComponent implements OnInit {
   deleteTask(taskId: number): void {
     this.taskService.deleteTask(taskId).subscribe(
       () => {
+        // Обновляем список задач, удаляя задачу
         this.tasks = this.tasks.filter(task => task.id !== taskId);
+        // Обновляем отфильтрованный список
+        this.filterTasks(); // Применяем фильтрацию заново, если она была активна
         console.log(`Task with ID ${taskId} deleted`);
       },
       err => {

@@ -1,36 +1,9 @@
 {
-  "tasks": [
-    {
-      "id": "81b5",
-      "title": "My task",
-      "description": "First task!",
-      "status": "не выполнена",
-      "userId": "4fea7e7f-13f1-4d59-850d-dae8ab4a8b14"
-    },
-    {
-      "id": "c6e9",
-      "title": "My task",
-      "description": "first task done!",
-      "status": "готово",
-      "userId": "7d9f1df6-558f-47e0-8dd5-1d88bea3fbf2"
-    },
-    {
-      "id": "f028",
-      "title": "Not my task",
-      "description": "First",
-      "status": "не выполнена",
-      "userId": "7d9f1df6-558f-47e0-8dd5-1d88bea3fbf2"
-    }
-  ],
+  "tasks": [],
   "users": [
     {
-      "id": "4fea7e7f-13f1-4d59-850d-dae8ab4a8b14",
-      "email": "example@mail.ru",
-      "password": "654321"
-    },
-    {
-      "id": "7d9f1df6-558f-47e0-8dd5-1d88bea3fbf2",
-      "email": "1234@mail.ru",
+      "id": "69d3da29-f7b7-46eb-be3e-fbd0fe1c9a95",
+      "email": "123456@mail.ru",
       "password": "123456"
     }
   ]
