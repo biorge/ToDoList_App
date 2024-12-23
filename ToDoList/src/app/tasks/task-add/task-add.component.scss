@@ -2,22 +2,18 @@
 .task-form {
   max-width: 600px; /* Увеличим ширину формы */
   margin: 2rem auto;
+  margin-bottom: calc(var(--footer-height) + 2rem);
   padding: 2rem;
   border-radius: 8px;
   background: linear-gradient(135deg, #ffffff, #f9f9f9);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   text-align: center;
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
 
   /* Центрируем форму по горизонтали и вертикали */
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   width: 100%;
 }
 
@@ -40,7 +36,8 @@ h2 {
 }
 
 /* Стили для полей ввода */
-input, textarea {
+input,
+textarea {
   width: 100%; /* Поля будут занимать всю доступную ширину */
   padding: 0.75rem;
   margin-top: 0.5rem;
@@ -58,12 +55,14 @@ textarea {
 }
 
 /* Сделаем поля title и description более широкими */
-input, textarea {
+input,
+textarea {
   max-width: 100%; /* Убедимся, что они не выходят за пределы формы */
   box-sizing: border-box;
 }
 
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
   border-color: #007bff;
   box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
 }

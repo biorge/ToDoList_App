@@ -1,8 +1,23 @@
 {
-  "tasks": [],
+  "tasks": [
+    {
+      "id": "6b24",
+      "title": "My first task",
+      "description": "I love Angular",
+      "status": "не выполнена",
+      "userId": "d7fa5994-a5cd-428a-8cec-ac49667c10fc"
+    },
+    {
+      "id": "1f1c",
+      "title": "Second task ",
+      "description": "Completed",
+      "status": "готово",
+      "userId": "d7fa5994-a5cd-428a-8cec-ac49667c10fc"
+    }
+  ],
   "users": [
     {
-      "id": "69d3da29-f7b7-46eb-be3e-fbd0fe1c9a95",
+      "id": "d7fa5994-a5cd-428a-8cec-ac49667c10fc",
       "email": "123456@mail.ru",
       "password": "123456"
     }

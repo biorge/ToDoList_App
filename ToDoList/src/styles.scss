@@ -1,5 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
-html, body {
+:root {
+  --footer-height: 50px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
   height: 100%;
   margin: 0;
   display: flex;
